@@ -14,7 +14,8 @@ jobs:
         actions:
           -   name: Rector
               run: 'vendor/bin/rector process app --dry-run --debug'
-
+          -   name: PHPStan
+              run: 'vendor/bin/phpstan --debug'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
